@@ -1,0 +1,36 @@
+{
+  "name": "erd",
+  "main": "./lib/main",
+  "version": "0.0.0",
+  "description": "Translates a plain text description of a relational database schema to a graphical entity-relationship diagram.",
+  "keywords": [
+    "erd",
+    "db",
+    "database",
+    "diagram"
+  ],
+  "activationCommands": {
+    "atom-text-editor[data-grammar~=erd]": "erd:toggle"
+  },
+  "repository": "https://github.com/aki77/atom-erd",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "tmp": "0.0.31",
+    "util.promisify": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0"
+  },
+  "configSchema": {
+    "erdCommandPath": {
+      "order": 1,
+      "type": "string",
+      "default": "erd"
+    }
+  }
+}

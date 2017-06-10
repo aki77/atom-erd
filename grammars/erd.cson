@@ -1,0 +1,37 @@
+scopeName: 'source.erd'
+name: 'erd'
+fileTypes: ['er']
+patterns: [
+  {
+    name: 'comment.line.erd'
+    begin: '#'
+    end: '\\n'
+  }
+  {
+    name: 'constant.character.entity.erd'
+    begin: '\\['
+    end: '\\]'
+  }
+  {
+    'include': '#string'
+  }
+  {
+    name: 'meta.section.attributes.erd'
+    begin: '\\{'
+    end: '\\}'
+    patterns: [
+      {
+        'include': '#string'
+      }
+    ]
+  }
+]
+repository:
+  string:
+    patterns: [
+      {
+        name: 'string.quoted.double.erd'
+        begin: '"'
+        end: '"'
+      }
+    ]
